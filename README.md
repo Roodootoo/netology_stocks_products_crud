@@ -1,5 +1,16 @@
 # Склады и товары
 
+## Для запуска контейнера
+
+docker build . --tag stocks_products:0.1
+docker run -d -p 8765:6060 stocks_products:0.1
+
+
+## Добавление данных
+
+curl -X POST localhost:8765/api/v1/products/ -H 'Content-Type: application/json' -d '{"title": "Помидор", "description": "Лучшие помидоры на рынке"}'
+
+
 ## Техническая задача: реализовать CRUD-логику для продуктов и складов, используя Django Rest Framework.
 
 **CRUD** – аббревиатура для Create-Read-Update-Delete. Ей обозначают логику для операций создания-чтения-обновления-удаления сущностей. Подробнее: https://ru.wikipedia.org/wiki/CRUD
