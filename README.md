@@ -2,8 +2,8 @@
 
 ## Для запуска контейнера
 
-docker build . --tag stocks_products:0.1
-docker run -d -p 8765:6060 stocks_products:0.1
+- docker build . --tag stocks_products:0.1
+- docker run -d -p 8765:6060 stocks_products:0.1
 
 
 ## Добавление данных
